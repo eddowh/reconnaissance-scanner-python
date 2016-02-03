@@ -19,7 +19,6 @@ def get_robots_txt(url):
 
     try:
         req = urlopen(path)
-        print 'yay'
     except Exception, err:
         print err
         return
