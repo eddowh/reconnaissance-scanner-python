@@ -4,7 +4,7 @@
 import os
 
 
-def create_directory(directory):
+def create_dir(directory):
     """
     Create a folder if not created yet.
     """
