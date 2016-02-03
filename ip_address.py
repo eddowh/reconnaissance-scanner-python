@@ -18,3 +18,10 @@ def get_ip_address(url):
 
     return results[marker:].splitlines()[0]
 
+
+def main():
+    print get_ip_address('google.com')
+
+
+if __name__ == '__main__':
+    main()
