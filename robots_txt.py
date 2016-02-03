@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from urllib2 import urlopen
-from io import TextIOWrapper
+import urllib2
 
 
 def get_robots_txt(url):
@@ -18,16 +17,17 @@ def get_robots_txt(url):
     path += "robots.txt"
 
     try:
-        req = urlopen(path)
+        req = urllib2.urlopen(path, data=None)
     except Exception, err:
         print err
         return
     else:
-        data = TextIOWrapper(req, encoding='utf-8')
-        return data.read()
+        data = req.read()
+        return data
+
 
 def main():
-    print get_robots_txt('https://www.reddit.com')
+    print get_robots_txt('https://www.google.com/')
 
 
 if __name__ == '__main__':
