@@ -15,7 +15,10 @@ ROOT_DIR = 'companies'
 
 def main():
     create_dir(ROOT_DIR)
+    gather_info('reddit', 'https://www.reddit.com')
     gather_info('google', 'https://www.google.com')
+    gather_info('facebook', 'https://www.facebook.com')
+    gather_info('hacker-news', 'https://news.ycombinator.com/')
 
 
 def gather_info(name, url):

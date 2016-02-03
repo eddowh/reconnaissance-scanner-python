@@ -19,7 +19,7 @@ def get_robots_txt(url):
     try:
         req = urllib2.urlopen(path, data=None)
     except Exception, err:
-        print err
+        print "ERROR: %s" % err
         return
     else:
         data = req.read()
