@@ -3,3 +3,5 @@ venv
 
 # example output
 companies
+
+# omit .pyc files
