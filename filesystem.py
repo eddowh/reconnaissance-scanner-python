@@ -16,6 +16,5 @@ def write_file(path, data):
     """
     Write content into file.
     """
-    f = open(path, 'w')
-    f.write(data)
-    f.close()
+    with open(path, 'w') as f:
+        f.write(data)

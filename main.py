@@ -3,11 +3,8 @@
 
 from tld import get_tld
 
-from general import *
-from ip_address import *
-from nmap import *
-from robots_txt import *
-from whois import *
+from filesystem import *
+from helpers import *
 
 
 ROOT_DIR = 'companies'
@@ -15,9 +12,7 @@ ROOT_DIR = 'companies'
 
 def main():
     create_dir(ROOT_DIR)
-    gather_info('reddit', 'https://www.reddit.com')
-    gather_info('google', 'https://www.google.com')
-    gather_info('facebook', 'https://www.facebook.com')
+    gather_info('baidu', 'http://www.baidu.com/')
     gather_info('hacker-news', 'https://news.ycombinator.com/')
 
 
